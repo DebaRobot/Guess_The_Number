@@ -1,0 +1,26 @@
+#1. Change the number range from 1 to 1M
+#2. Game should ask us to guess a number
+#3. Clue : Higher or lower than the Guess
+#4. Imform player if he won.
+
+from random import randint
+
+start = 1
+end = 10000
+
+value = randint(start, end)
+
+print("The computer chose a number between", start," and ", end)
+
+guess = None 
+
+while guess != value:
+    text = input("Guess the number : ")
+    guess = int(text)
+    
+    if guess < value:
+        print("The number is higher")
+    elif guess > value:
+        print("The number is lower")
+    
+print("Congraluations !!!, You guess the number. You won .")
